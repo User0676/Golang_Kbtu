@@ -17,7 +17,7 @@ func main() {
 	r.HandleFunc("/pokemons/{name}", PokemonShow)
 	r.HandleFunc("/", HomePage)
 
-	log.Printf("Starting server on http://localhost:%s\n", PORT)
+	log.Printf("Starting server on http://localhost%s\n", PORT)
 	err := http.ListenAndServe(PORT, r)
 	log.Fatal(err)
 
